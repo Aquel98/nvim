@@ -14,17 +14,23 @@ help:
 	@echo "  - ruff"
 	@echo "  - basedpyright"
 	@echo "  - typos-lsp"
+	@echo "  - yaml-language-server"
+	@echo ""
+	@echo "Programs:"
+	@echo "  - ast-grep"
+	@echo "  - rg"
+	@echo "  - fzf"
 
 check:
 	@echo "Checking package managers..."
 	@command -v pipx >/dev/null 2>&1 || (echo "❌ pipx not found" && exit 1)
-# @command -v npm >/dev/null 2>&1 || (echo "❌ npm not found" && exit 1)
+	@command -v npm >/dev/null 2>&1 || (echo "❌ npm not found" && exit 1)
 	@command -v cargo >/dev/null 2>&1 || (echo "❌ cargo not found" && exit 1)
 	@command -v wget >/dev/null 2>&1 || (echo "❌ wget not found" && exit 1)
 	@command -v unzip >/dev/null 2>&1 || (echo "❌ unzip not found" && exit 1)
 	@echo "✓ All package managers found"
 
-install: check install-lua-ls install-clangd install-ruff install-basedpyright install-typos-lsp install-ast-grep install-fzf install-rg
+install: check install-lua-ls install-clangd install-ruff install-basedpyright install-typos-lsp install-yaml-ls install-ast-grep install-fzf install-rg
 	@echo "✓ All LSPs installed."
 
 install-lua-ls: 
@@ -78,6 +84,11 @@ install-typos-lsp:
 	@mkdir -p $(INSTALL_DIR)
 	@ln -sf $(LSP_DATA_DIR)/typos-lsp/typos-lsp $(INSTALL_DIR)/typos-lsp
 	@echo "✓ typos-lsp installed."
+
+install-yaml-ls:
+	@echo "Installing yaml-language-server..."
+	@npm install -g yaml-language-server
+	@echo "✓ yaml-language-server installed."
 
 install-fzf:
 	@echo "Installing fzf..."

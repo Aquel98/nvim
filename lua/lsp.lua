@@ -4,6 +4,7 @@ vim.lsp.enable({
    "basedpyright",
    "lua_ls",
    "typos_lsp",
+   "yaml_ls",
 })
 
 -- LSP logging, to see where it gets saved, enter the command ":lua print(vim.lsp.get_log_path())"
