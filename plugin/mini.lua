@@ -9,7 +9,14 @@ require("mini.sessions").setup()
 local map = require("mini.map")
 map.setup({
    integrations = { map.gen_integration.builtin_search(), map.gen_integration.gitsigns(), map.gen_integration.diagnostic() },
-   symbols = { encode = map.gen_encode_symbols.dot("4x2"), },
+   symbols = {
+      encode = map.gen_encode_symbols.dot("4x2"),
+      scroll_view = "╎",
+      scroll_line = "🮚",
+   },
+   window = {
+      winblend = 50
+   },
 })
 
 -- Keymaps for MiniMap
@@ -41,3 +48,10 @@ statusline.setup({
 statusline.section_location = function()
    return "%2l/%2L:%-2v"
 end
+
+-- Icons
+require("mini.icons").setup({
+   filetype = {
+      dotenv = { glyph = "", hl = "MiniIconsYellow" },
+   },
+})

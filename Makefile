@@ -34,7 +34,7 @@ install: check install-lua-ls install-clangd install-ruff install-basedpyright i
 	@echo "✓ All LSPs installed."
 
 install-lua-ls: 
-	@echo "Installing lua-language-server..."
+	@echo "Installing lua-language-server..."
 	@mkdir -p $(LSP_DATA_DIR)/lua-ls
 	@cd $(LSP_DATA_DIR)/lua-ls && \
 		wget -q --show-progress https://github.com/LuaLS/lua-language-server/releases/download/3.19.1/lua-language-server-3.19.1-linux-x64.tar.gz -O lua-ls.tar.gz && \
