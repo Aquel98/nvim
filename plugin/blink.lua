@@ -6,7 +6,16 @@ require("blink.cmp").setup({
          nerd_font_variant = "normal",
       },
       completion = {
-         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+         menu = {
+            border = "single"
+         },
+         documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 0,
+            window = {
+               border = "single"
+            },
+         },
       },
       sources = {
          default = { "lsp", "path", "snippets", "lazydev" },
@@ -15,5 +24,10 @@ require("blink.cmp").setup({
          },
       },
       fuzzy = { implementation = "prefer_rust_with_warning" },
-      signature = { enabled = true },
+      signature = {
+         enabled = true,
+         window = {
+            border = "single"
+         },
+      },
 })
