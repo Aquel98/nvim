@@ -3,6 +3,7 @@ treesitter.install({
    "bash",
    "c",
    "cpp",
+   "cmake",
    "diff",
    "editorconfig",
    "html",
