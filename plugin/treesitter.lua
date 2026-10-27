@@ -21,6 +21,7 @@ treesitter.install({
    "toml",
    "python",
    "dockerfile",
+   "yaml",
 })
 treesitter.update()
 
