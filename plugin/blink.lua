@@ -7,15 +7,13 @@ require("blink.cmp").setup({
       },
       completion = {
          menu = {
-            border = "single",
-            winblend = 20
+            border = "single"
          },
          documentation = {
             auto_show = true,
             auto_show_delay_ms = 0,
             window = {
-               border = "single",
-               winblend = 20
+               border = "single"
             },
          },
       },
@@ -29,8 +27,7 @@ require("blink.cmp").setup({
       signature = {
          enabled = true,
          window = {
-            border = "single",
-            winblend = 20
+            border = "single"
          },
       },
 })

@@ -86,9 +86,6 @@ vim.o.confirm = true
 -- Enable winbar
 vim.o.winbar = "%<%f"
 
--- Set window transparency
-vim.o.winblend = 20
-
 -- Set grep command
 vim.o.grepprg = "rg --vimgrep"
 
