@@ -50,7 +50,7 @@ local config = {
       "--query-driver=/opt/sdks/**/*linux-g++",
       "--clang-tidy",
    },
-   root_markers = { ".clangd", "compile_commands.json" },
+   root_markers = { ".clangd", ".clang-format", "compile_commands.json", },
    filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
    capabilities = {
       textDocument = {
