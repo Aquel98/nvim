@@ -5,6 +5,10 @@ require("conform").setup({
       c = { "clang-format", lsp_format = "fallback" },
       cpp = { "clang-format", lsp_format = "fallback" },
    },
+   format_on_save = {
+      lsp_format = "fallback",
+      timeout_ms = 500,
+   },
 })
 vim.keymap.set("n", "<leader>f",
                function ()
