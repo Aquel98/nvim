@@ -22,6 +22,7 @@ treesitter.install({
    "python",
    "dockerfile",
    "yaml",
+   "xml",
 })
 treesitter.update()
 
