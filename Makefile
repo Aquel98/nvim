@@ -70,7 +70,7 @@ install-ruff:
 
 install-basedpyright:
 	@echo "Installing basedpyright..."
-	@uv tool install basedpyright
+	@uv tool install --force basedpyright
 	@echo "✓ basedpyright installed."
 
 
